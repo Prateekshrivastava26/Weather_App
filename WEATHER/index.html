@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img src="wee.jpg " alt=""/>
+    <div class="app-wrapper">
+      <div class="top-bar">
+        <div class="toggle-container"></div>
+        <button onclick="getLocationWeather()" class="gps-btn">
+          📍 Use My Location
+        </button>
+      </div>
+      </div>
+
+      <div class="weather-container">
+        <h1>🌦 Weather App</h1>
+        <input
+          type="text"
+          id="locationInput"
+          placeholder="Enter city name..."
+        />
+        <div class="controls">
+          <button onclick="getWeather()">Get Weather</button>
+          <label><input type="checkbox" id="unitToggle" /> Show in °F</label>
+        </div>
+        <div class="cloud">
+          <section id="result" class="weather-output"></section>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

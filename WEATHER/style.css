@@ -1,0 +1,130 @@
+:root {
+  --primary-bg: #f0f8ff;
+  --text-color: #333;
+  --accent: #0077ff;
+  --card-bg: #ffffffcc;
+  --highlight: #ffcc00;
+  --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset and base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  color: var(--text-color);
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Input + buttons section */
+.weather-container {
+  background: var(--card-bg);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Form input */
+input[type="text"] {
+  padding: 12px 18px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 70%;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 18px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #005bcc;
+}
+
+/* Output display */
+#result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Weather icon */
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* Cloud animation */
+.cloud {
+  width: 80px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50px;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 60px 0 #fff, 30px 10px #fff;
+  margin: 20px auto;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Search history buttons */
+#result button {
+  background-color: var(--highlight);
+  color: #000;
+  margin: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#result button:hover {
+  background-color: #ffb700;
+}
+
+/* Themed backgrounds */
+body.sunny-theme {
+  background: linear-gradient(to right, #fceabb, #f8b500);
+}
+body.cloudy-theme {
+  background: linear-gradient(to right, #d7d2cc, #304352);
+}
+body.rainy-theme {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+body.snowy-theme {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+body.default-theme {
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
